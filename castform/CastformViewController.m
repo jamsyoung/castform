@@ -14,16 +14,13 @@
 
 @implementation CastformViewController
 
-- (void)viewDidLoad
+
+- (IBAction)getFeed:(id)sender
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"getFeed button pressed");
+
+    feedResponse.text = @"You pressed the Get Feed button!";
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Castform View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CastformViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LGF-si-SuF"/>
+                        <viewControllerLayoutGuide type="bottom" id="5RQ-5M-oC4"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-RC-ycr">
+                                <rect key="frame" x="20" y="35" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="61M-MW-RuN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get Feed"/>
+                                <connections>
+                                    <action selector="getFeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SGS-ly-KId"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-pQ-mc2">
+                                <rect key="frame" x="20" y="103" width="280" height="445"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fVm-RC-ycr" firstAttribute="top" secondItem="LGF-si-SuF" secondAttribute="bottom" constant="15" id="Am6-7T-Mog"/>
+                            <constraint firstAttribute="trailing" secondItem="fVm-RC-ycr" secondAttribute="trailing" constant="20" symbolic="YES" id="GNV-Xm-702"/>
+                            <constraint firstItem="fVm-RC-ycr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="MNd-Dh-V0O"/>
+                            <constraint firstItem="fVm-RC-ycr" firstAttribute="trailing" secondItem="DTC-pQ-mc2" secondAttribute="trailing" id="gHV-Et-dl2"/>
+                            <constraint firstItem="DTC-pQ-mc2" firstAttribute="top" secondItem="fVm-RC-ycr" secondAttribute="bottom" constant="8" symbolic="YES" id="iIS-hg-Jsu"/>
+                            <constraint firstItem="fVm-RC-ycr" firstAttribute="leading" secondItem="DTC-pQ-mc2" secondAttribute="leading" id="k2q-dh-EdJ"/>
+                            <constraint firstAttribute="bottom" secondItem="DTC-pQ-mc2" secondAttribute="bottom" constant="20" symbolic="YES" id="k5K-4d-URz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="feedResponse" destination="DTC-pQ-mc2" id="pjd-tG-KbM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

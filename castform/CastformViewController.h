@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CastformViewController : UIViewController
+{
+    IBOutlet UITextView *feedResponse;
+}
+
+- (IBAction)getFeed:(id)sender;
 
 @end
