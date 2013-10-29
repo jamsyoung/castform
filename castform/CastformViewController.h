@@ -11,6 +11,7 @@
 @interface CastformViewController : UIViewController
 {
     IBOutlet UITextView *feedResponse;
+    IBOutlet UITextView *genericOutput;
 }
 
 - (IBAction)getFeed:(id)sender;
