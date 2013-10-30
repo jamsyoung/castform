@@ -29,18 +29,8 @@
                                     <action selector="getFeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SGS-ly-KId"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-pQ-mc2">
-                                <rect key="frame" x="20" y="103" width="280" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="174" id="NRa-ax-WPH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft3-gm-Gnm">
-                                <rect key="frame" x="20" y="285" width="280" height="175"/>
+                                <rect key="frame" x="20" y="103" width="280" height="357"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,22 +39,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fVm-RC-ycr" firstAttribute="trailing" secondItem="DTC-pQ-mc2" secondAttribute="trailing" id="403-JF-tCg"/>
                             <constraint firstItem="fVm-RC-ycr" firstAttribute="top" secondItem="LGF-si-SuF" secondAttribute="bottom" constant="15" id="5kX-JT-du5"/>
-                            <constraint firstItem="DTC-pQ-mc2" firstAttribute="top" secondItem="fVm-RC-ycr" secondAttribute="bottom" constant="8" symbolic="YES" id="6aq-nG-yWb"/>
-                            <constraint firstItem="fVm-RC-ycr" firstAttribute="leading" secondItem="Ft3-gm-Gnm" secondAttribute="leading" id="8Q2-OD-6ol"/>
-                            <constraint firstItem="fVm-RC-ycr" firstAttribute="leading" secondItem="DTC-pQ-mc2" secondAttribute="leading" id="CwN-03-wAS"/>
+                            <constraint firstItem="Ft3-gm-Gnm" firstAttribute="top" secondItem="fVm-RC-ycr" secondAttribute="bottom" constant="8" symbolic="YES" id="9lX-Zt-o91"/>
                             <constraint firstAttribute="trailing" secondItem="fVm-RC-ycr" secondAttribute="trailing" constant="20" symbolic="YES" id="EpW-Ky-rOJ"/>
-                            <constraint firstItem="Ft3-gm-Gnm" firstAttribute="top" secondItem="DTC-pQ-mc2" secondAttribute="bottom" constant="8" symbolic="YES" id="Olc-gW-NMe"/>
-                            <constraint firstItem="5RQ-5M-oC4" firstAttribute="top" secondItem="Ft3-gm-Gnm" secondAttribute="bottom" constant="20" id="SZ2-uX-fk5"/>
+                            <constraint firstItem="Ft3-gm-Gnm" firstAttribute="leading" secondItem="fVm-RC-ycr" secondAttribute="leading" id="Ot8-in-wde"/>
+                            <constraint firstItem="Ft3-gm-Gnm" firstAttribute="trailing" secondItem="fVm-RC-ycr" secondAttribute="trailing" id="bNZ-z3-FkS"/>
+                            <constraint firstAttribute="bottom" secondItem="Ft3-gm-Gnm" secondAttribute="bottom" constant="20" symbolic="YES" id="ckF-iM-9Ja"/>
                             <constraint firstItem="fVm-RC-ycr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="eYd-jU-5Hu"/>
-                            <constraint firstItem="Ft3-gm-Gnm" firstAttribute="height" secondItem="DTC-pQ-mc2" secondAttribute="height" constant="1" id="mYP-bW-n4O"/>
-                            <constraint firstItem="fVm-RC-ycr" firstAttribute="trailing" secondItem="Ft3-gm-Gnm" secondAttribute="trailing" id="sHy-xp-igN"/>
-                            <constraint firstItem="DTC-pQ-mc2" firstAttribute="height" secondItem="Ft3-gm-Gnm" secondAttribute="height" constant="-1" id="vdw-ga-PQe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="feedResponse" destination="DTC-pQ-mc2" id="pjd-tG-KbM"/>
                         <outlet property="genericOutput" destination="Ft3-gm-Gnm" id="M3a-j8-JPo"/>
                     </connections>
                 </viewController>
