@@ -1,69 +1,3 @@
-//
-//  CastformViewController.m
-//  castform
-//
-//  Created by jayoung on 10/27/13.
-//  Copyright (c) 2013 jamsyoung. All rights reserved.
-//
-
-#import "CastformViewController.h"
-
-@interface CastformViewController ()
-
-@end
-
-@implementation CastformViewController
-
-
-- (IBAction)getFeed:(id)sender
-{
-    NSLog(@"getFeed button pressed");
-//    [self getWeatherDataWithUrl:@"http://api.wunderground.com/api/78908c8b9d29a5d2/conditions/q/GA/30064.json"];
-    [self getWeatherDataWithUrl:@"https://api.mongolab.com/api/1/databases/wunderground-30064/collections/wunderground-data?apiKey=bE4_VaRW1UBRDs87vM8z-3UzNLCIawNY"];
-}
-
-
-
-- (void)getWeatherDataWithUrl:(NSString*)url
-{
-    NSURL *uri = [NSURL URLWithString:url];
-    NSData *responseData = [NSData dataWithContentsOfURL:uri];
-
-    NSString *stringData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", stringData);
-
-    NSArray *serializedJsonData = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-
-
-
-    if ([NSJSONSerialization isValidJSONObject:serializedJsonData]) {
-
-        NSDictionary *currentObservation;
-        // check if serializedJsonData is a Dictionary or an Array - ASSUMPTION it will be one or the other
-        if ([serializedJsonData isKindOfClass:[NSDictionary class]]) {
-            currentObservation = [serializedJsonData valueForKey:@"current_observation"];
-        } else {
-            currentObservation = [serializedJsonData[0] valueForKey:@"current_observation"];
-        }
-
-        for (id currentKey in currentObservation) {
-            [genericOutput setText:[NSString stringWithFormat:@"%@%@: %@\n", genericOutput.text, currentKey, [currentObservation valueForKey:currentKey]]];
-        }
-    } else {
-        genericOutput.text = @"Invalid JSON!  BOO!";
-    }
-}
-
-@end
-
-
-
-/*
-Example response for http://api.wunderground.com/api/78908c8b9d29a5d2/conditions/q/GA/30064.json
-Snapshot at https://api.mongolab.com/api/1/databases/wunderground-30064/collections/wunderground-data?apiKey=bE4_VaRW1UBRDs87vM8z-3UzNLCIawNY
-
-curl -X POST -d @wunderground-30064-response.json https://api.mongolab.com/api/1/databases/wunderground-30064/collections/wunderground-data?apiKey=bE4_VaRW1UBRDs87vM8z-3UzNLCIawNY --header "Content-Type: application/json"
-
 {
     "response": {
         "version": "0.1",
@@ -114,15 +48,15 @@ curl -X POST -d @wunderground-30064-response.json https://api.mongolab.com/api/1
         "local_tz_offset": "-0400",
         "weather": "Clear",
         "temperature_string": "52.0 F (11.1 C)",
-        "temp_f": 52,
+        "temp_f": 52.0,
         "temp_c": 11.1,
         "relative_humidity": "99%",
         "wind_string": "Calm",
         "wind_dir": "SE",
         "wind_degrees": 135,
-        "wind_mph": 0,
+        "wind_mph": 0.0,
         "wind_gust_mph": 0,
-        "wind_kph": 0,
+        "wind_kph": 0.0,
         "wind_gust_kph": 0,
         "pressure_mb": "1026",
         "pressure_in": "30.30",
@@ -156,4 +90,3 @@ curl -X POST -d @wunderground-30064-response.json https://api.mongolab.com/api/1
         "ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=33.920177,-84.633575"
     }
 }
-*/
