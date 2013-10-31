@@ -2,7 +2,7 @@
 //  WeatherFetcher.m
 //  castform
 //
-//  Created by jayoung on 10/30/13.
+//  Created by james young on 10/30/13.
 //  Copyright (c) 2013 jamsyoung. All rights reserved.
 //
 // inspired by https://github.com/sefk/cs193p-shutterbug/blob/master/Shutterbug/FlickrFetcher.m
@@ -12,14 +12,13 @@
 
 @implementation WeatherFetcher
 
+
 + (NSDictionary *)executeWeatherFetchForRequest:(NSString *)request
 {
     NSString *apiKey = @"78908c8b9d29a5d2";
+
     NSString *query = [NSString stringWithFormat:@"http://api.wunderground.com/api/%@/%@", apiKey, request];
-
-
     query = [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
     NSLog(@"query: %@", query);
 
     NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:query] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
@@ -38,7 +37,9 @@
 + (NSDictionary *)getConditionsForState:(NSString *)state zip:(NSString *)zip
 {
     NSString *request = [NSString stringWithFormat:@"conditions/q/%@/%@.json", state, zip];
-    return [self executeWeatherFetchForRequest:request];
+    NSDictionary *response = [self executeWeatherFetchForRequest:request];
+
+    return [response valueForKey:@"current_observation"];
 }
 
 
