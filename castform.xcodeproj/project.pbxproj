@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B45E410E1821C51D00861CD9 /* WeatherFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B45E410D1821C51D00861CD9 /* WeatherFetcher.m */; };
 		B4D2A438181D8AAD001B2438 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D2A437181D8AAD001B2438 /* Foundation.framework */; };
 		B4D2A43A181D8AAD001B2438 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D2A439181D8AAD001B2438 /* CoreGraphics.framework */; };
 		B4D2A43C181D8AAD001B2438 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D2A43B181D8AAD001B2438 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B45E410C1821C51D00861CD9 /* WeatherFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherFetcher.h; sourceTree = "<group>"; };
+		B45E410D1821C51D00861CD9 /* WeatherFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherFetcher.m; sourceTree = "<group>"; };
 		B4D2A434181D8AAD001B2438 /* castform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = castform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D2A437181D8AAD001B2438 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B4D2A439181D8AAD001B2438 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,11 +115,11 @@
 		B4D2A43D181D8AAD001B2438 /* castform */ = {
 			isa = PBXGroup;
 			children = (
-				B4D2A446181D8AAD001B2438 /* CastformAppDelegate.h */,
-				B4D2A447181D8AAD001B2438 /* CastformAppDelegate.m */,
 				B4D2A449181D8AAD001B2438 /* Main.storyboard */,
 				B4D2A44C181D8AAD001B2438 /* CastformViewController.h */,
 				B4D2A44D181D8AAD001B2438 /* CastformViewController.m */,
+				B45E410C1821C51D00861CD9 /* WeatherFetcher.h */,
+				B45E410D1821C51D00861CD9 /* WeatherFetcher.m */,
 				B4D2A44F181D8AAD001B2438 /* Images.xcassets */,
 				B4D2A43E181D8AAD001B2438 /* Supporting Files */,
 			);
@@ -126,6 +129,8 @@
 		B4D2A43E181D8AAD001B2438 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4D2A446181D8AAD001B2438 /* CastformAppDelegate.h */,
+				B4D2A447181D8AAD001B2438 /* CastformAppDelegate.m */,
 				B4D2A43F181D8AAD001B2438 /* castform-Info.plist */,
 				B4D2A440181D8AAD001B2438 /* InfoPlist.strings */,
 				B4D2A443181D8AAD001B2438 /* main.m */,
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45E410E1821C51D00861CD9 /* WeatherFetcher.m in Sources */,
 				B4D2A44E181D8AAD001B2438 /* CastformViewController.m in Sources */,
 				B4D2A444181D8AAD001B2438 /* main.m in Sources */,
 				B4D2A448181D8AAD001B2438 /* CastformAppDelegate.m in Sources */,
@@ -461,6 +467,7 @@
 				B4D2A468181D8AAD001B2438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4D2A469181D8AAD001B2438 /* Build configuration list for PBXNativeTarget "castformTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +476,7 @@
 				B4D2A46B181D8AAD001B2438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

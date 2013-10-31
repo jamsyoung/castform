@@ -13,10 +13,6 @@
     IBOutlet UITextView *genericOutput;
 }
 
-
-- (void)getWeatherDataWithUrl:(NSString *)url;
-
-
-- (IBAction)getFeed:(id)sender;
+- (IBAction)displayCurrentConditions:(id)sender;
 
 @end

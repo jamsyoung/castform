@@ -24,9 +24,9 @@
                                     <constraint firstAttribute="height" constant="60" id="VsO-2I-p4s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Get Feed"/>
+                                <state key="normal" title="Get Current Conditions"/>
                                 <connections>
-                                    <action selector="getFeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SGS-ly-KId"/>
+                                    <action selector="displayCurrentConditions:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YDL-6n-Qeg"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft3-gm-Gnm">
